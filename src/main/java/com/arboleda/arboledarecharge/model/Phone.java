@@ -17,7 +17,7 @@ public class Phone {
     }
 
     public Phone() {
-        
+
     }
 
     public String getId() {
