@@ -16,6 +16,10 @@ public class Phone {
         this.telecomProvider = telecomProvider;
     }
 
+    public Phone() {
+        
+    }
+
     public String getId() {
         return id;
     }
