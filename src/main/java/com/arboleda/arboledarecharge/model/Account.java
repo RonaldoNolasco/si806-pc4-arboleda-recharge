@@ -15,6 +15,17 @@ public class Account {
     @Column(name = "id", nullable = false)
     private Long id;
 
+    public Account(Long id, String currency, User user, Double balance) {
+        this.id = id;
+        this.currency = currency;
+        this.user = user;
+        this.balance = balance;
+    }
+
+    public Account() {
+
+    }
+
     public Long getId() {
         return id;
     }

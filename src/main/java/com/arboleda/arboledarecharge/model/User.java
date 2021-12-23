@@ -13,6 +13,16 @@ public class User {
     @Column(name = "id", nullable = false)
     private Long id;
 
+    public User(Long id, String name, String secretKey) {
+        this.id = id;
+        this.name = name;
+        this.secretKey = secretKey;
+    }
+
+    public User() {
+
+    }
+
     public Long getId() {
         return id;
     }

@@ -11,6 +11,11 @@ public class Phone {
     @Column(name = "id", nullable = false)
     private String id;
 
+    public Phone(String id, TelecomProvider telecomProvider) {
+        this.id = id;
+        this.telecomProvider = telecomProvider;
+    }
+
     public String getId() {
         return id;
     }

@@ -10,6 +10,16 @@ public class TelecomProvider {
     @Column(name = "id", nullable = false)
     private Long id;
 
+    public TelecomProvider(Long id, String acceptedCurrency, String name) {
+        this.id = id;
+        this.acceptedCurrency = acceptedCurrency;
+        this.name = name;
+    }
+
+    public TelecomProvider() {
+
+    }
+
     public Long getId() {
         return id;
     }
