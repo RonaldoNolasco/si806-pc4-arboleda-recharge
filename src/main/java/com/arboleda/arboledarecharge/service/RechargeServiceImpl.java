@@ -18,7 +18,7 @@ import java.util.Objects;
 @Service
 public class RechargeServiceImpl implements RechargeService {
     @Autowired
-    private RechargeRepository rechargeRespository;
+    private RechargeRepository rechargeRepository;
     @Autowired
     private TelecomProviderRepository telecomProviderRepository;
     @Autowired
@@ -62,7 +62,7 @@ public class RechargeServiceImpl implements RechargeService {
         recharge.setPhone(phone);
         recharge.setAmount(createRechargeDto.getAmount());
         recharge.setCurrency(createRechargeDto.getCurrency());
-        rechargeRespository.save(recharge);
+        rechargeRepository.save(recharge);
         account.balance -= createRechargeDto.getAmount();
         accountRepository.save(account);
         return recharge;
